@@ -64,19 +64,19 @@ This project demonstrates how Infrastructure as Code can be used to create scala
 
 ### 1. Setup & Initialization
 
-```sh
-**Install Terraform (Linux/Ubuntu)**
 
+**Install Terraform (Linux/Ubuntu)**
+```sh
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install terraform
 
 # Verify installation
 terraform -version
-
+```
 
 **Install Terraform (Linux/Amazon Linux)**
-
+```sh
 sudo yum install -y yum-utils shadow-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum install terraform
