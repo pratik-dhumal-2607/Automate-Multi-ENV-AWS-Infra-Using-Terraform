@@ -1,4 +1,4 @@
-# Multi-Environment AWS Infrastructure Automation using Terraform
+## Multi-Environment AWS Infrastructure Automation using Terraform
 
 ##  Project Overview
 
@@ -64,18 +64,19 @@ This project demonstrates how Infrastructure as Code can be used to create scala
 
 ### 1. Setup & Initialization
 
-**Install Terraform (Linux/Ubuntu)**
 ```sh
+**Install Terraform (Linux/Ubuntu)**
+
 wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install terraform
 
 # Verify installation
 terraform -version
-```
+
 
 **Install Terraform (Linux/Amazon Linux)**
-``sh
+
 sudo yum install -y yum-utils shadow-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 sudo yum install terraform
@@ -130,17 +131,5 @@ terraform output ec2_public_ip                  # Show specific output
 - Declarative infrastructure management
 - Repeatable deployments
 
-
----
-
-## Project Highlights
-
-Infrastructure as Code  → Terraform
-Cloud Provider          → AWS
-Environments            → DEV / STG / PRD
-Compute                 → EC2
-Storage                 → S3
-Database                → DynamoDB
-Version Control         → Git / GitHub
 
 ---
